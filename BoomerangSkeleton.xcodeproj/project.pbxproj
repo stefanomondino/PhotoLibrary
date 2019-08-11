@@ -30,6 +30,7 @@
 		70FEDA7323008A95000BB179 /* PhotoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FEDA7223008A95000BB179 /* PhotoItemView.swift */; };
 		70FEDA7523008AA2000BB179 /* PhotoItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70FEDA7423008AA2000BB179 /* PhotoItemView.xib */; };
 		70FEDA7723008AD3000BB179 /* PhotoItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FEDA7623008AD3000BB179 /* PhotoItemViewModel.swift */; };
+		70FEDA7923008C1D000BB179 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FEDA7823008C1D000BB179 /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		70FEDA7223008A95000BB179 /* PhotoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItemView.swift; sourceTree = "<group>"; };
 		70FEDA7423008AA2000BB179 /* PhotoItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoItemView.xib; sourceTree = "<group>"; };
 		70FEDA7623008AD3000BB179 /* PhotoItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItemViewModel.swift; sourceTree = "<group>"; };
+		70FEDA7823008C1D000BB179 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		8F1AB10F11271E317873AD77 /* Pods-BoomerangSkeleton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoomerangSkeleton.debug.xcconfig"; path = "Target Support Files/Pods-BoomerangSkeleton/Pods-BoomerangSkeleton.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,9 +105,9 @@
 		705328B22300605300699DF3 /* BoomerangSkeleton */ = {
 			isa = PBXGroup;
 			children = (
-				70FEDA7123008A33000BB179 /* View */,
 				70FEDA6123008267000BB179 /* Model */,
 				705328D72300758600699DF3 /* ViewController */,
+				70FEDA7123008A33000BB179 /* View */,
 				705328D42300754300699DF3 /* ViewModel */,
 				705328D12300748700699DF3 /* Router */,
 				705328C82300720F00699DF3 /* Identifiers */,
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				70FEDA6623008293000BB179 /* Photo.swift */,
+				70FEDA7823008C1D000BB179 /* Image.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				705328D62300754F00699DF3 /* SplashViewModel.swift in Sources */,
 				70FEDA6023007AF0000BB179 /* InteractionViewModel.swift in Sources */,
 				705328CC2300722900699DF3 /* Identifiers.swift in Sources */,
+				70FEDA7923008C1D000BB179 /* Image.swift in Sources */,
 				705328D02300743100699DF3 /* Routes+Configuration.swift in Sources */,
 				70FEDA6D230086C7000BB179 /* PhotoListViewController.swift in Sources */,
 				70FEDA7723008AD3000BB179 /* PhotoItemViewModel.swift in Sources */,

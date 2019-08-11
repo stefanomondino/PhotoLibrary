@@ -8,13 +8,15 @@
 
 import Foundation
 import Boomerang
+import RxSwift
 
 class PhotoItemViewModel: ItemViewModelType {
     
     var identifier: Identifier = Identifiers.View.photo
     let title: String
-    
+    let image: Observable<UIImage?>
     init(photo: Photo) {
         title = photo.identifier
+        image = photo.image(targetSize: CGSize(width: 300, height: 300))
     }
 }

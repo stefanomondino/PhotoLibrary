@@ -9,11 +9,18 @@
 import Foundation
 import Boomerang
 import UIKit
+import RxSwift
+import RxCocoa
 
 class PhotoItemView: UIView, ViewModelCompatible {
     
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var titleLabel: UILabel?
     func configure(with viewModel: PhotoItemViewModel) {
+        self.disposeBag = DisposeBag()
         self.titleLabel?.text = viewModel.title
+        viewModel.image.asDriver(onErrorJustReturn: nil)
+            .drive(image.rx.image).disposed(by: disposeBag)
+        
     }
 }
