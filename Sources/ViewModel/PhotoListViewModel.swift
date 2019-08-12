@@ -53,4 +53,9 @@ class PhotoListViewModel: SceneViewModelType, ListViewModelType, InteractionView
         default: return .empty()
         }
     }
+    
+    func aspectRatio(atIndex indexPath: IndexPath) -> CGFloat {
+         guard let model = self.dataHolder[indexPath] as? Photo else { return 1 }
+        return model.size.width / model.size.height
+    }
 }

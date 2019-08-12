@@ -8,6 +8,7 @@ PODS:
   - Moya/RxSwift (14.0.0-alpha.2):
     - Moya/Core
     - RxSwift (~> 5.0)
+  - PluginLayout (0.0.1)
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -19,6 +20,7 @@ PODS:
 DEPENDENCIES:
   - Boomerang (from `https://github.com/synesthesia-it/Boomerang`, branch `v5`)
   - Moya/RxSwift (from `https://github.com/Moya/Moya`, tag `14.0.0-alpha.2`)
+  - PluginLayout (from `https://github.com/stefanomondino/PluginLayout`, branch `master`)
   - SnapKit
 
 SPEC REPOS:
@@ -36,6 +38,9 @@ EXTERNAL SOURCES:
   Moya:
     :git: https://github.com/Moya/Moya
     :tag: 14.0.0-alpha.2
+  PluginLayout:
+    :branch: master
+    :git: https://github.com/stefanomondino/PluginLayout
 
 CHECKOUT OPTIONS:
   Boomerang:
@@ -44,16 +49,20 @@ CHECKOUT OPTIONS:
   Moya:
     :git: https://github.com/Moya/Moya
     :tag: 14.0.0-alpha.2
+  PluginLayout:
+    :commit: eba28cc51dca2e2b6a941130a4a383504416edfd
+    :git: https://github.com/stefanomondino/PluginLayout
 
 SPEC CHECKSUMS:
   Alamofire: bd07938ceecad59d2492aeecb1f785a8f2721160
   Boomerang: 748bd61538d0f9565ed9a2833112e3d35ee3e612
   Moya: a6f1894cf6baec301aa02b0ecf10e5d8ade556ae
+  PluginLayout: 9018e1c08cec1efe49ad659a9f3887b65b360f05
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: a41eeb1972b4d8d8019d3aeba9ac680528a170ab
+PODFILE CHECKSUM: 625aeae7b0dae28dc5e208f839b5f0cbdf5a934a
 
 COCOAPODS: 1.7.1

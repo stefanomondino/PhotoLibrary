@@ -18,7 +18,10 @@ class PhotoItemViewModel: ItemViewModelType {
     init(photo: Photo) {
         self.identifier = Identifiers.View.photo
         title = photo.identifier
-        image = photo.image(targetSize: CGSize(width: 300, height: 300))
+        image = photo
+            .image(targetSize: CGSize(width: 300, height: 300))
+            .share(replay: 1, scope: .forever)
+            .startWith(UIImage())
     }
     init (album: Album) {
         title = album.title
