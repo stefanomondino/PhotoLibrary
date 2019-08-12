@@ -28,8 +28,9 @@ extension Photo: WithImage {
     func image(targetSize: CGSize) -> Observable<UIImage?> {
         return Observable.create { observer in
             
-            let handle = Photo.imageManager.requestImage(for: self.asset, targetSize: targetSize, contentMode: .aspectFill, options: nil) { (image, info) in
+            let handle = Photo.imageManager.requestImage(for: self.asset, targetSize: targetSize, contentMode: .default, options: nil) { (image, info) in
                 observer.onNext(image)
+                print (image?.size)
                 if info?[PHImageResultIsDegradedKey] as? Bool == false {
                     observer.onCompleted()
                 }
