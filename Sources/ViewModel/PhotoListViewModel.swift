@@ -15,13 +15,13 @@ class PhotoListViewModel: SceneViewModelType, ListViewModelType, InteractionView
     
     var dataHolder: DataHolder = DataHolder()
     var selection: Selection = .empty
-    
+    var sceneTitle: String = ""
     static func albums() -> PhotoListViewModel {
         let dataHolder = DataHolder(data: DataSources
             .photoLibrary
             .albums(query: .all)
             .map {DataGroup($0)})
-        return PhotoListViewModel(dataHolder: dataHolder)
+        return PhotoListViewModel(dataHolder: dataHolder, title: "Albums")
     }
     
     static func photos(from album: Album) -> PhotoListViewModel {
@@ -29,12 +29,12 @@ class PhotoListViewModel: SceneViewModelType, ListViewModelType, InteractionView
         let dataHolder = DataHolder(data:
             DataSources.photoLibrary.photos(query: .fromAlbum(album))
             .map {DataGroup($0)})
-        return PhotoListViewModel(dataHolder: dataHolder)
+        return PhotoListViewModel(dataHolder: dataHolder, title: album.title)
     }
     
-    private init(dataHolder: DataHolder) {
+    private init(dataHolder: DataHolder, title: String) {
         self.dataHolder = dataHolder
-        
+        self.sceneTitle = title
         self.selection = defaultSelection()
     }
     

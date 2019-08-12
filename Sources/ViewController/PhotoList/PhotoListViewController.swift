@@ -23,7 +23,9 @@ private class PhotosDelegate: CollectionViewDelegate, PluginLayoutDelegate, Mosa
         return 3
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: PluginLayout, effectsForItemAt indexPath: IndexPath, kind: String?) -> [PluginEffect] {
+        return []
+    }
 }
 
 class PhotoListViewController: UIViewController, ViewModelCompatible, InteractionCompatible {
@@ -43,7 +45,7 @@ class PhotoListViewController: UIViewController, ViewModelCompatible, Interactio
                 let ratio = viewModel.aspectRatio(atIndex: indexPath)
                 return CGSize(width: width, height: width / ratio)
             })
-            .with(insets: { _, _ in return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)})
+            .with(insets: { _, _ in return UIEdgeInsets(top: 10, left: 10, bottom: 100, right: 10)})
             .with(itemSpacing: {_, _ in return 2})
             .with(lineSpacing: {_, _ in return 2})
             .with (select:{ viewModel.selection.execute(.selectItem($0)) })

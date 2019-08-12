@@ -8,6 +8,7 @@ extension UIViewController {
     static func scene<T: UIViewController>(with viewModel: SceneViewModelType) -> T? {
         guard let viewController = viewModel.sceneIdentifier.scene() as? T else { return nil }
         (viewController as? (UIViewController & ViewModelCompatibleType))?.loadViewAndSet(viewModel: viewModel)
+        viewController.title = viewModel.sceneTitle
         return viewController
     }
 }

@@ -12,7 +12,7 @@ import RxSwift
 
 struct Photo: EntityType {
     fileprivate static let imageManager: PHCachingImageManager = PHCachingImageManager()
-    fileprivate static let scheduler = SerialDispatchQueueScheduler.init(qos: .utility)
+    fileprivate static let scheduler = SerialDispatchQueueScheduler.init(qos: .userInteractive)
     private let asset: PHAsset
     let size: CGSize
     var identifier: String
