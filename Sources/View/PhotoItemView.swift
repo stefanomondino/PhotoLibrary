@@ -22,12 +22,12 @@ class PhotoItemView: UIView, ViewModelCompatible {
         if let image = self.image {
             
             self.rx
-                .observeWeakly(CGRect.self, "bounds")
-                .map { $0?.size ?? .zero }
+                .bounds()
+                .map { $0.size }
                 .distinctUntilChanged()
                 .bind(to: viewModel.sizeRelay)
                 .disposed(by: disposeBag)
-            
+      
             viewModel
                 .image
                 .asDriver(onErrorJustReturn: nil)

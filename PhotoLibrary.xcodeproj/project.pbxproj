@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		701C822F23017A0200EEB54D /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C822E23017A0200EEB54D /* Album.swift */; };
 		701C82312301804400EEB54D /* AlbumItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 701C823023017FB700EEB54D /* AlbumItemView.xib */; };
+		701C82382301E06300EEB54D /* Rx+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C82372301E06300EEB54D /* Rx+Utilities.swift */; };
 		705328B42300605300699DF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705328B32300605300699DF3 /* AppDelegate.swift */; };
 		705328BB2300605400699DF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705328BA2300605400699DF3 /* Assets.xcassets */; };
 		705328BE2300605400699DF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705328BC2300605400699DF3 /* LaunchScreen.storyboard */; };
@@ -39,6 +40,7 @@
 		48D690776F4B670D8174A5C2 /* Pods-PhotoLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoLibrary.debug.xcconfig"; path = "Target Support Files/Pods-PhotoLibrary/Pods-PhotoLibrary.debug.xcconfig"; sourceTree = "<group>"; };
 		701C822E23017A0200EEB54D /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		701C823023017FB700EEB54D /* AlbumItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumItemView.xib; sourceTree = "<group>"; };
+		701C82372301E06300EEB54D /* Rx+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Utilities.swift"; sourceTree = "<group>"; };
 		705328B02300605300699DF3 /* PhotoLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		705328B32300605300699DF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		705328BA2300605400699DF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		701C82362301E05400EEB54D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				701C82372301E06300EEB54D /* Rx+Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		705328A72300605300699DF3 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,7 @@
 		705328B22300605300699DF3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				701C82362301E05400EEB54D /* Utilities */,
 				70FEDA6123008267000BB179 /* Model */,
 				705328D72300758600699DF3 /* ViewController */,
 				70FEDA7123008A33000BB179 /* View */,
@@ -348,6 +359,7 @@
 			files = (
 				70FEDA6723008293000BB179 /* Photo.swift in Sources */,
 				705328CE2300739100699DF3 /* View.swift in Sources */,
+				701C82382301E06300EEB54D /* Rx+Utilities.swift in Sources */,
 				70FEDA7323008A95000BB179 /* PhotoItemView.swift in Sources */,
 				705328D32300749900699DF3 /* Routes.swift in Sources */,
 				705328CA2300721C00699DF3 /* Scene.swift in Sources */,
