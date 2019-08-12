@@ -19,8 +19,21 @@ class PhotoItemView: UIView, ViewModelCompatible {
     func configure(with viewModel: PhotoItemViewModel) {
         self.disposeBag = DisposeBag()
         self.titleLabel?.text = viewModel.title
-        viewModel.image.asDriver(onErrorJustReturn: nil)
-            .drive(image.rx.image).disposed(by: disposeBag)
+        if let image = self.image {
+            
+            self.rx
+                .observeWeakly(CGRect.self, "bounds")
+                .map { $0?.size ?? .zero }
+                .distinctUntilChanged()
+                .bind(to: viewModel.sizeRelay)
+                .disposed(by: disposeBag)
+            
+            viewModel
+                .image
+                .asDriver(onErrorJustReturn: nil)
+                .drive(image.rx.image)
+                .disposed(by: disposeBag)
+        }
         
     }
 }
