@@ -14,7 +14,7 @@ extension Identifiers {
     enum View: String, CaseIterable {
         
         case photo
-        
+        case album
     }
 }
 

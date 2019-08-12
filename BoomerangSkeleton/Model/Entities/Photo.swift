@@ -14,7 +14,8 @@ struct Photo: EntityType {
     fileprivate static let imageManager: PHCachingImageManager = PHCachingImageManager()
     private let asset: PHAsset
     var identifier: String
-    init (asset: PHAsset) {
+    init? (asset: PHAsset?) {
+        guard let asset = asset else { return nil }
         self.asset = asset
         self.identifier = asset.localIdentifier
     }

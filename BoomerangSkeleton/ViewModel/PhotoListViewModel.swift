@@ -10,24 +10,22 @@ import Foundation
 import Boomerang
 import RxSwift
 
-class PhotoListViewModel: SceneViewModelType, ListViewModel {
+class PhotoListViewModel: SceneViewModelType, ListViewModelType {
     var sceneIdentifier: SceneIdentifier = Identifiers.Scene.photoList
-    
-    typealias DataType = [Photo]
     
     var dataHolder: DataHolder = DataHolder()
     
     init() {
-        self.dataHolder = DataHolder(data: group(DataSources.photoLibrary.photos(query: .all)))
-    }
-    
-    func group(_ observable: Observable<[Photo]>) -> Observable<DataGroup> {
-        return observable.map { DataGroup($0) }
+        self.dataHolder = DataHolder(data: DataSources
+            .photoLibrary
+            .albums(query: .all)
+            .map {DataGroup($0)})
     }
     
     func convert(model: ModelType, at indexPath: IndexPath, for type: String?) -> IdentifiableViewModelType? {
         switch model {
         case let photo as Photo: return PhotoItemViewModel(photo: photo)
+        case let album as Album: return PhotoItemViewModel(album: album)
         default: return nil
         }
     }

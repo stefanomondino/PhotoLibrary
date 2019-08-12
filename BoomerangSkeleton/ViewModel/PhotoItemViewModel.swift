@@ -12,11 +12,17 @@ import RxSwift
 
 class PhotoItemViewModel: ItemViewModelType {
     
-    var identifier: Identifier = Identifiers.View.photo
+    let identifier: Identifier
     let title: String
     let image: Observable<UIImage?>
     init(photo: Photo) {
+        self.identifier = Identifiers.View.photo
         title = photo.identifier
         image = photo.image(targetSize: CGSize(width: 300, height: 300))
+    }
+    init (album: Album) {
+        title = album.title
+        self.identifier = Identifiers.View.album
+        image = album.cover?.image(targetSize: CGSize(width: 300, height: 300)) ?? .just(nil)
     }
 }

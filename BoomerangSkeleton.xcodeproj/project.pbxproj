@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		204BE80F42F0D5577B29E088 /* Pods_BoomerangSkeleton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C911C7B6F0D747F4674DFEC /* Pods_BoomerangSkeleton.framework */; };
+		701C822F23017A0200EEB54D /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701C822E23017A0200EEB54D /* Album.swift */; };
+		701C82312301804400EEB54D /* AlbumItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 701C823023017FB700EEB54D /* AlbumItemView.xib */; };
 		705328B42300605300699DF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705328B32300605300699DF3 /* AppDelegate.swift */; };
 		705328BB2300605400699DF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705328BA2300605400699DF3 /* Assets.xcassets */; };
 		705328BE2300605400699DF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705328BC2300605400699DF3 /* LaunchScreen.storyboard */; };
@@ -36,6 +38,8 @@
 /* Begin PBXFileReference section */
 		2C911C7B6F0D747F4674DFEC /* Pods_BoomerangSkeleton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoomerangSkeleton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47C3C6F805EB5C8CEC85C4F6 /* Pods-BoomerangSkeleton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoomerangSkeleton.release.xcconfig"; path = "Target Support Files/Pods-BoomerangSkeleton/Pods-BoomerangSkeleton.release.xcconfig"; sourceTree = "<group>"; };
+		701C822E23017A0200EEB54D /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		701C823023017FB700EEB54D /* AlbumItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumItemView.xib; sourceTree = "<group>"; };
 		705328B02300605300699DF3 /* BoomerangSkeleton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoomerangSkeleton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		705328B32300605300699DF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		705328BA2300605400699DF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				70FEDA6623008293000BB179 /* Photo.swift */,
+				701C822E23017A0200EEB54D /* Album.swift */,
 				70FEDA7823008C1D000BB179 /* Image.swift */,
 			);
 			path = Entities;
@@ -208,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				70FEDA7223008A95000BB179 /* PhotoItemView.swift */,
+				701C823023017FB700EEB54D /* AlbumItemView.xib */,
 				70FEDA7423008AA2000BB179 /* PhotoItemView.xib */,
 			);
 			path = View;
@@ -285,6 +291,7 @@
 				70FEDA7523008AA2000BB179 /* PhotoItemView.xib in Resources */,
 				705328BE2300605400699DF3 /* LaunchScreen.storyboard in Resources */,
 				70FEDA6E230086C7000BB179 /* PhotoListViewController.xib in Resources */,
+				701C82312301804400EEB54D /* AlbumItemView.xib in Resources */,
 				705328DD230075AE00699DF3 /* SplashViewController.xib in Resources */,
 				705328BB2300605400699DF3 /* Assets.xcassets in Resources */,
 			);
@@ -348,6 +355,7 @@
 				705328E1230077E100699DF3 /* SplashViewController.swift in Sources */,
 				70FEDA6523008283000BB179 /* DataSources.swift in Sources */,
 				705328D62300754F00699DF3 /* SplashViewModel.swift in Sources */,
+				701C822F23017A0200EEB54D /* Album.swift in Sources */,
 				70FEDA6023007AF0000BB179 /* InteractionViewModel.swift in Sources */,
 				705328CC2300722900699DF3 /* Identifiers.swift in Sources */,
 				70FEDA7923008C1D000BB179 /* Image.swift in Sources */,
