@@ -17,12 +17,21 @@ protocol PhotosDataSourceType {
 
 enum PhotosDataSourceParameters {
     case all
+    case fromAlbum(Album)
     case albums
 }
 class PhotosDataSource: PhotosDataSourceType {
+    
     func photos(query: PhotosDataSourceParameters) -> Observable<[Photo]> {
-        return self.authorized(assets()).photos()
+        switch query {
+        case .all: return self.authorized(assets()).photos()
+        case .fromAlbum(let album): return self.authorized(assets(from: album.collection)).photos()
+        default: return .empty()
+        }
+        
     }
+    
+    
     
     func albums(query: PhotosDataSourceParameters) -> Observable<[Album]> {
         return self.authorized(albums())

@@ -12,7 +12,7 @@ import RxSwift
 
 struct Album: EntityType {
     fileprivate static let imageManager: PHCachingImageManager = PHCachingImageManager()
-    private let collection: PHAssetCollection?
+    let collection: PHAssetCollection?
     var identifier: String
     var cover: Photo?
     let title: String

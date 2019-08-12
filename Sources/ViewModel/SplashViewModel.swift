@@ -15,7 +15,7 @@ class SplashViewModel: SceneViewModelType, InteractionViewModelType {
   
     func start() {
 //        let observable = Observable<Interaction>.empty()
-        let observable = Observable<Interaction>.just(.route(RestartRoute(viewModel: PhotoListViewModel())))
+        let observable = Observable<Interaction>.just(.route(RestartRoute(viewModel: PhotoListViewModel.albums())))
         self.interact(.observable(observable))
     }
 }

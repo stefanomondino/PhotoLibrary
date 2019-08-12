@@ -11,7 +11,19 @@ import Boomerang
 extension Router {
     static func bootstrap() {
         self.register(RestartRoute.self) { route, scene in
-            UIApplication.shared.delegate?.window??.rootViewController = UIViewController.scene(with: route.viewModel)
+            guard let destination = UIViewController.scene(with: route.viewModel) else { return }
+            if route.hasNavigation {
+                let navigation = UINavigationController(rootViewController: destination)
+                 UIApplication.shared.delegate?.window??.rootViewController = navigation
+            } else {
+                 UIApplication.shared.delegate?.window??.rootViewController = destination
+            }
+        }
+        
+        self.register(NavigationRoute.self) { route, scene in
+            if let vc = UIViewController.scene(with: route.viewModel) {
+                scene?.navigationController?.pushViewController(vc, animated: true)
+            }
         }
         
         restart()

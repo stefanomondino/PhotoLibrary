@@ -9,7 +9,7 @@
 import UIKit
 import Boomerang
 
-class PhotoListViewController: UIViewController, ViewModelCompatible {
+class PhotoListViewController: UIViewController, ViewModelCompatible, InteractionCompatible {
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -24,6 +24,7 @@ class PhotoListViewController: UIViewController, ViewModelCompatible {
                 if type != nil { return .zero }
                 return CGSize(width: 100, height: 100)
             })
+            .with (select:{ viewModel.selection.execute(.selectItem($0)) })
         
         collectionView.boomerang.configure(with: viewModel, delegate: delegate)
         

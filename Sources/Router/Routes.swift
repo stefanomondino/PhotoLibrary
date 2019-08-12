@@ -10,8 +10,13 @@ import Boomerang
 
 struct RestartRoute: ViewModelRoute {
     let viewModel: SceneViewModelType
-    
+    let hasNavigation: Bool
     init(viewModel: SceneViewModelType = SplashViewModel()) {
         self.viewModel = viewModel
+        hasNavigation = !(viewModel is SplashViewModel)
     }
+}
+
+struct NavigationRoute: ViewModelRoute {
+    let viewModel: SceneViewModelType
 }
