@@ -40,7 +40,7 @@
 		47C3C6F805EB5C8CEC85C4F6 /* Pods-BoomerangSkeleton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoomerangSkeleton.release.xcconfig"; path = "Target Support Files/Pods-BoomerangSkeleton/Pods-BoomerangSkeleton.release.xcconfig"; sourceTree = "<group>"; };
 		701C822E23017A0200EEB54D /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		701C823023017FB700EEB54D /* AlbumItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumItemView.xib; sourceTree = "<group>"; };
-		705328B02300605300699DF3 /* BoomerangSkeleton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoomerangSkeleton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		705328B02300605300699DF3 /* PhotoLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		705328B32300605300699DF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		705328BA2300605400699DF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		705328BD2300605400699DF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		705328A72300605300699DF3 = {
 			isa = PBXGroup;
 			children = (
-				705328B22300605300699DF3 /* BoomerangSkeleton */,
+				705328B22300605300699DF3 /* Sources */,
 				705328B12300605300699DF3 /* Products */,
 				7AC6063EB8A0AF6DE5137E61 /* Pods */,
 				1D291CB1A6F92735E5B81127 /* Frameworks */,
@@ -101,12 +101,12 @@
 		705328B12300605300699DF3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				705328B02300605300699DF3 /* BoomerangSkeleton.app */,
+				705328B02300605300699DF3 /* PhotoLibrary.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		705328B22300605300699DF3 /* BoomerangSkeleton */ = {
+		705328B22300605300699DF3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				70FEDA6123008267000BB179 /* Model */,
@@ -120,7 +120,7 @@
 				705328BC2300605400699DF3 /* LaunchScreen.storyboard */,
 				705328BF2300605400699DF3 /* Info.plist */,
 			);
-			path = BoomerangSkeleton;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		705328C82300720F00699DF3 /* Identifiers */ = {
@@ -231,9 +231,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		705328AF2300605300699DF3 /* BoomerangSkeleton */ = {
+		705328AF2300605300699DF3 /* PhotoLibrary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 705328C22300605400699DF3 /* Build configuration list for PBXNativeTarget "BoomerangSkeleton" */;
+			buildConfigurationList = 705328C22300605400699DF3 /* Build configuration list for PBXNativeTarget "PhotoLibrary" */;
 			buildPhases = (
 				AA5396AA6E4B5DA25BEF9438 /* [CP] Check Pods Manifest.lock */,
 				705328AC2300605300699DF3 /* Sources */,
@@ -245,9 +245,9 @@
 			);
 			dependencies = (
 			);
-			name = BoomerangSkeleton;
+			name = PhotoLibrary;
 			productName = BoomerangSkeleton;
-			productReference = 705328B02300605300699DF3 /* BoomerangSkeleton.app */;
+			productReference = 705328B02300605300699DF3 /* PhotoLibrary.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -265,7 +265,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 705328AB2300605300699DF3 /* Build configuration list for PBXProject "BoomerangSkeleton" */;
+			buildConfigurationList = 705328AB2300605300699DF3 /* Build configuration list for PBXProject "PhotoLibrary" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -278,7 +278,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				705328AF2300605300699DF3 /* BoomerangSkeleton */,
+				705328AF2300605300699DF3 /* PhotoLibrary */,
 			);
 		};
 /* End PBXProject section */
@@ -504,12 +504,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BoomerangSkeleton/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.stefanomondino.BoomerangSkeleton;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stefanomondino.PhotoLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -522,12 +522,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BoomerangSkeleton/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.stefanomondino.BoomerangSkeleton;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stefanomondino.PhotoLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -537,7 +537,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		705328AB2300605300699DF3 /* Build configuration list for PBXProject "BoomerangSkeleton" */ = {
+		705328AB2300605300699DF3 /* Build configuration list for PBXProject "PhotoLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				705328C02300605400699DF3 /* Debug */,
@@ -546,7 +546,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		705328C22300605400699DF3 /* Build configuration list for PBXNativeTarget "BoomerangSkeleton" */ = {
+		705328C22300605400699DF3 /* Build configuration list for PBXNativeTarget "PhotoLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				705328C32300605400699DF3 /* Debug */,
